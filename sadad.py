@@ -14,8 +14,8 @@ i = 1
 x = 1
 s = 0
 while i <= n:
-    s += x
-    x = 1 + 1*i
+    x *= i
     i += 1
+    s += x
 
 print("Summa ir: ", s)
