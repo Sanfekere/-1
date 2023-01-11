@@ -21,10 +21,26 @@
 # print("Summa ir: ", s)
 
 
-n = int(input("Ievadiet sk n: "))
-s = 1
-while n >= 1:
-    s *= n
-    n -= 1
+# n = int(input("Ievadiet sk n: "))
+# s = 1
+# while n >= 1:
+#     s *= n
+#     n -= 1
 
-print("Summa ir: ", s)
+# print("Summa ir: ", s)
+
+# n = int(input("Ievadiet sk n: "))
+# s = 1
+# for i in range(1, n + 1):
+#     s *= i
+
+# print(s)
+
+x = int(input("Ievadiet sk x: "))
+y = int(input("Ievadiet sk y: "))
+s = 0
+
+for i in int(y):
+    s = x^y
+
+print(s)
