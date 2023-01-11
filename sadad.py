@@ -38,7 +38,7 @@
 
 x = int(input("Ievadiet sk x: "))
 y = int(input("Ievadiet sk y: "))
-s = 0
+s = 1
 
 for i in int(y):
     s = x^y
