@@ -36,11 +36,23 @@
 
 # print(s)
 
-x = int(input("Ievadiet sk x: "))
-y = int(input("Ievadiet sk y: "))
-s = 1
+# x = int(input("Ievadiet sk x: "))
+# y = int(input("Ievadiet sk y: "))
+# s = 1
 
-for i in int(y):
-    s = x^y
+# for i in int(y):
+#     s = x^y
 
-print(s)
+# print(s)
+
+
+# n = int(input("Ievadiet sk n: "))
+# for i in range(1, n, 6):
+#     print(i)
+
+# i = 1
+# while i < n:
+#   print(i)
+#   if i == n:
+#     break
+#   i += 6
