@@ -56,3 +56,11 @@
 #   if i == n:
 #     break
 #   i += 6
+
+x = int(input("Ievadi sk x "))
+y = int(input("Ievadi sk Y "))
+
+rez = x
+for i in range(1, y):
+    rez = rez * x
+print(rez)
