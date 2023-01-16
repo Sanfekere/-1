@@ -57,10 +57,44 @@
 #     break
 #   i += 6
 
-x = int(input("Ievadi sk x "))
-y = int(input("Ievadi sk Y "))
+# x = int(input("Ievadi sk x "))
+# y = int(input("Ievadi sk Y "))
 
-rez = x
-for i in range(1, y):
-    rez = rez * x
-print(rez)
+# rez = x
+# for i in range(1, y):
+#     rez = rez * x
+# print(rez)
+
+# n = int(input("Ievadi sk n "))
+# sum = 0
+
+# for i in range(1, n + 1):
+#     sum = sum + 1/(i * 2 + 1)**2
+
+# print(sum)
+
+# n = int(input("Ievadi sk n "))
+# sum = 0
+
+# for i in range(1, n + 1):
+#     sum = sum + 1/i**2
+
+# print(sum)
+
+# n = int(input("Ievadi sk n "))
+# sum = 0
+
+# for i in range(1, n + 1):
+#     sum = 2 ** i/(i**2*(i  + 1))
+
+# print(sum)
+
+n = int(input("Ievadi sk n "))
+sum = 1
+
+for i in range(1, n + 1):
+    sum *= i
+    i += 1
+    sum += n
+
+print(sum)
