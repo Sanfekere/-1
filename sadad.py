@@ -89,12 +89,37 @@
 
 # print(sum)
 
-n = int(input("Ievadi sk n "))
-sum = 1
+# n = int(input("Ievadi sk n "))
+# sum = 1
 
-for i in range(1, n + 1):
-    sum *= i
+# for i in range(1, n + 1):
+#     sum *= i
+#     i += 1
+#     sum += n
+
+# print(sum)
+
+#4.uzd
+# n = int(input("Ievadiet sk n: "))
+# i = 1
+# x = 1
+# s = 1
+# while i <= n:
+#     x *= 1/2**i
+#     i += 1
+#     s += x
+
+# print("Summa ir: ", s)
+
+#5.4
+
+n = int(input("Ievadiet sk n: "))
+i = 1
+x = 1
+s = 0
+while i <= n:
+    x *= i
     i += 1
-    sum += n
+    s += x
 
-print(sum)
+print("Summa ir: ", s)
