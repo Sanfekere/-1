@@ -113,13 +113,40 @@
 
 #5.4
 
-n = int(input("Ievadiet sk n: "))
-i = 1
-x = 1
-s = 0
-while i <= n:
-    x *= i
-    i += 1
-    s += x
+# n = int(input("Ievadiet sk n: "))
+# i = 1
+# x = 1
+# s = 0
+# while i <= n:
+#     x *= i
+#     i += 1
+#     s += x
 
-print("Summa ir: ", s)
+# print("Summa ir: ", s)
+
+n = int(input("Ievadiet sk n: "))
+# a = 0
+# b = 1
+# for i in range(2,n):
+#             c = a + b
+#             a = b
+#             b = c
+#             print(c)
+# print(c)
+
+def fib(n):
+    a = 0
+    b = 1
+    if n == 1:
+        print(a)
+    else:
+        print(a)
+        print(b)
+        for i in range(2,n):
+            c = a + b
+            a = b
+            b = c
+            g += c
+            print(c)
+            print(g)
+fib(n)
