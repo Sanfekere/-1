@@ -124,7 +124,7 @@
 
 # print("Summa ir: ", s)
 
-n = int(input("Ievadiet sk n: "))
+# n = int(input("Ievadiet sk n: "))
 # a = 0
 # b = 1
 # for i in range(2,n):
@@ -134,19 +134,28 @@ n = int(input("Ievadiet sk n: "))
 #             print(c)
 # print(c)
 
-def fib(n):
-    a = 0
-    b = 1
-    if n == 1:
-        print(a)
-    else:
-        print(a)
-        print(b)
-        for i in range(2,n):
-            c = a + b
-            a = b
-            b = c
-            g += c
-            print(c)
-            print(g)
-fib(n)
+# def fib(n):
+#     a = 0
+#     b = 1
+#     g = 0
+#     if n == 1:
+#         print(a)
+#     else:
+#         print(a)
+#         print(b)
+#         for i in range(2,n):
+#             c = a + b
+#             # g += c
+#             a = b
+#             b = c
+#             print(c)
+# fib(n)
+
+
+i = -5
+x1 = -5
+x2 = 5
+y = 0.5
+while i <= x2:
+    print(i, "|", 2 * i ** 2)
+    i += y 
