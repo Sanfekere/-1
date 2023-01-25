@@ -152,10 +152,23 @@
 # fib(n)
 
 
-i = -5
-x1 = -5
-x2 = 5
-y = 0.5
-while i <= x2:
-    print(i, "|", 2 * i ** 2)
-    i += y 
+# i = -5
+# x1 = -5
+# x2 = 5
+# y = 0.5
+# while i <= x2:
+#     print(i, "|", 2 * i ** 2)
+#     i += y 
+
+p = float(input("Ievadiet iegūldīto naudu: "))
+n = float(input("Ievadiet iegūldīto procentu likmi: "))
+i = p
+s = 0
+x = 1
+
+while s >= p*2:
+    s = p + (p*n)/100
+    print(s)
+
+print(s)
+print(p + (p*n)/100)
