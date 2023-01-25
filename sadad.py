@@ -162,13 +162,26 @@
 
 p = float(input("Ievadiet iegūldīto naudu: "))
 n = float(input("Ievadiet iegūldīto procentu likmi: "))
-i = p
-s = 0
-x = 1
+# i = p
+# summa = p*2
+# x = 0
+# gadi = 1
+# proc = n/100
 
-while s >= p*2:
-    s = p + (p*n)/100
-    print(s)
+# while i >= summa:
+#     i = p + p * proc
+#     p1 = i
+#     gadi += 1
 
-print(s)
-print(p + (p*n)/100)
+# print(gadi)
+# print (i)
+# print(p + (p*n)/100)
+
+i = 1
+while p < n:
+  print(i)
+  if i == n:
+    break
+  i += 6
+
+
