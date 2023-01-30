@@ -160,8 +160,8 @@
 #     print(i, "|", 2 * i ** 2)
 #     i += y 
 
-p = float(input("Ievadiet iegūldīto naudu: "))
-n = float(input("Ievadiet iegūldīto procentu likmi: "))
+# p = float(input("Ievadiet iegūldīto naudu: "))
+# n = float(input("Ievadiet iegūldīto procentu likmi: "))
 # i = p
 # summa = p*2
 # x = 0
@@ -177,11 +177,19 @@ n = float(input("Ievadiet iegūldīto procentu likmi: "))
 # print (i)
 # print(p + (p*n)/100)
 
-i = 1
-while p < n:
-  print(i)
-  if i == n:
-    break
-  i += 6
+# i = 1
+# while p < n:
+#   print(i)
+#   if i == n:
+#     break
+#   i += 6
 
+h = float(input("Ievadiet SOLI "))
 
+judz = 1.609
+i = 5
+x2 = 7.5
+
+while i >= x2:
+  print(i + "jūdzes", "|", i*judz + "km")
+  i += judz

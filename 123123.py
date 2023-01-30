@@ -29,20 +29,20 @@
 
 # print("Summa ir: ", s)
 
-p = float(input("Ievadiet iegūldīto naudu: "))
-n = float(input("Ievadiet iegūldīto procentu likmi: "))
-i = p
-summa = p*2
-x = 0
-gadi = 1
-proc = n/100
-g = 1 
+# p = float(input("Ievadiet iegūldīto naudu: "))
+# n = float(input("Ievadiet iegūldīto procentu likmi: "))
+# i = p
+# summa = p*2
+# x = 0
+# gadi = 1
+# proc = n/100
+# g = 1 
 
-while i >= summa:
-    p1 = i
-    i = p1 + (p*proc)
-    gadi += 1
+# while i >= summa:
+#     p1 = i
+#     i = p1 + (p*proc)
+#     gadi += 1
 
-print(gadi)
-print (i)
-# print(p + (p*n)/100)
+# print(gadi)
+# print (i)
+# # print(p + (p*n)/100)
