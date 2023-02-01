@@ -46,3 +46,14 @@
 # print(gadi)
 # print (i)
 # # print(p + (p*n)/100)
+
+k = 1
+x = 1/20
+s = 0
+while s < 2:
+    s = (k**2+4)/(k**3+k+1)
+    if s < x:
+        break
+    k += 1
+
+print(k)
