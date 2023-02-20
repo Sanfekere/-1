@@ -1,5 +1,19 @@
 # 1) Programma pieprasa n veselus skaitļus, saglabā tos masīvā un paziņo: vismazāko skaitli un
 # tā indeksu (kārtas numuru).
+# sanja = []
+# n = int(input("Ievadiet cik skaitļus jūs rakstīsiet? "))
+
+# for i in range(n):
+#     sanja.append(int(input("Ievadiet "+ str(i+1) + ". skaitli: ")))
+
+# min = sanja[0]
+
+# for i in range(0, len(sanja)):    
+#    if(sanja[i] < min):    
+#        min = sanja[i]
+#        g = i    
+     
+     
 # 2) Pieprasīt masīvu, kas satur N dažādus veselus skaitļus, atrast lielākās un mazākās vērtības
 # starpību.
 # 3) Sastādīt programmu, kas pieprasa ievadīt 10 skaitļus un paziņo kurš no skaitļiem ir
@@ -22,10 +36,3 @@
 # b) visu skaitļu vidējo aritmētisko vērtību,
 # c) masīva lielāko skaitli un masīva mazāko skaitli,
 # d) pāra un nepāra skaitļu skaitu.
-sanja = []
-n = int(input("Ievadiet cik skaitļus jūs rakstīsiet"))
-
-for i in range(n):
-    sanja.append(int(input("Ievadiet", i , "skaitli: ")))
-
-print(sanja)
