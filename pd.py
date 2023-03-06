@@ -39,8 +39,6 @@ for i in range(linards):
 
 print("Vidējais aritmētiskais =",vdar/linards)
 
-<<<<<<< HEAD
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Linard uzliec #1-14 pirms tu uzraksti, lai saprastu kurš ir kurš uzd :D
 =======
 nepara2 = []
 for i in range(linards):
