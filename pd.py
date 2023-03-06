@@ -38,3 +38,21 @@ for i in range(linards):
     i += 1
 
 print("Vidējais aritmētiskais =",vdar/linards)
+
+nepara2 = []
+for i in range(linards):
+    if vaivods[i]%2 == 0:
+        None
+    else:
+        nepara2.append(vaivods[i])
+    i +=1
+
+print(nepara2, maxlen=20)
+
+sk = 0
+for i in range(linards):
+    if vaivods[i] == 14:
+        sk += 1
+    i +=1
+if i == 0:
+    
