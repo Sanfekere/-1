@@ -47,12 +47,23 @@ for i in range(linards):
         nepara2.append(vaivods[i])
     i +=1
 
-print(nepara2, maxlen=20)
+print(nepara2,)
 
 sk = 0
 for i in range(linards):
     if vaivods[i] == 14:
         sk += 1
     i +=1
-if i == 0:
-    
+
+if sk == 0:
+    print("Skaitļu kas sakrīt ar manu dzimšanas dienu nav.")
+else:
+    print("Skaitļu kas sakrīt ar manu dzimšanas dienu ", sk)
+
+mzvar = 0
+for i in range(linards):
+    if vaivods[i] < vdar/linards:
+        mzvar += 1
+    i +=1
+
+print("Skaitļu kas ir mazāki par vidējo aritmētisko ", mzvar)
