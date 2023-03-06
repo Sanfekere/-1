@@ -39,4 +39,24 @@ for i in range(linards):
 
 print("Vidējais aritmētiskais =",vdar/linards)
 
+<<<<<<< HEAD
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Linard uzliec #1-14 pirms tu uzraksti, lai saprastu kurš ir kurš uzd :D
+=======
+nepara2 = []
+for i in range(linards):
+    if vaivods[i]%2 == 0:
+        None
+    else:
+        nepara2.append(vaivods[i])
+    i +=1
+
+print(nepara2, maxlen=20)
+
+sk = 0
+for i in range(linards):
+    if vaivods[i] == 14:
+        sk += 1
+    i +=1
+if i == 0:
+    
+>>>>>>> 65c139f58b72721a17c5982bc6a86edc03bc5c4d
