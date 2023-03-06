@@ -1,21 +1,21 @@
 import random
-linards = 14+10+2006
-vaivods = []
+# linards = 14+10+2006
+# vaivods = []
 
-for i in range(linards):
-    vaivods.append(random.randrange(-150, 150))
+# for i in range(linards):
+#     vaivods.append(random.randrange(-150, 150))
 
-print(vaivods)
+# print(vaivods)
 
-pozitivi = 0
-nepozitivi = 0
+# pozitivi = 0
+# nepozitivi = 0
 
-for i in range(linards):
-    if vaivods[i] >= 0:
-        pozitivi += 1
-    elif vaivods[i] < 0:
-        nepozitivi += 1
-    i += 1
+# for i in range(linards):
+#     if vaivods[i] >= 0:
+#         pozitivi += 1
+#     elif vaivods[i] < 0:
+#         nepozitivi += 1
+#     i += 1
 
 # print("Pozitīvo sk skaits =", pozitivi, "Negatīvo sk skaits =",nepozitivi)
 
@@ -67,12 +67,35 @@ for i in range(linards):
 #     i +=1
 
 # print("Skaitļu kas ir mazāki par vidējo aritmētisko ", mzvar)
-divciparsk = 0
-for i in range(linards):
-    if vaivods[i] >= -99 and vaivods[i] < -9:
-        divciparsk += 1
-    elif vaivods[i] >= 10 and vaivods[i] < 100:
-        divciparsk += 1
-    i +=1
+# divciparsk = 0
+# for i in range(linards):
+#     if vaivods[i] >= -99 and vaivods[i] < -9:
+#         divciparsk += 1
+#     elif vaivods[i] >= 10 and vaivods[i] < 100:
+#         divciparsk += 1
+#     i +=1
 
-print(divciparsk)
+# print(divciparsk)
+# pirmsk = []
+# for i in range (linards):  
+#     if vaivods[i] > 1:  
+#         for i in range (2, vaivods[i]):  
+#             if (vaivods[i] % i) == 0:  
+#                 g = vaivods[i]
+#                 pirmsk.append(g)
+#     i += 1
+# print(pirmsk)
+# vaivods.sort()
+# print(vaivods)
+
+# vaivods2 = []
+# for i in range(linards):
+#     if vaivods[i]%5 == 0 and vaivods[i]%3 == 0:
+#         vaivods2.append(vaivods[i])
+#     i +=1
+# print(vaivods2)  
+
+
+rows, cols = (8, 16)
+vaivods3 = [[random.randrange(0, 1)]*cols]*rows
+print(vaivods3)
