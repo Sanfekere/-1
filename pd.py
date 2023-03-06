@@ -13,8 +13,20 @@ nepozitivi = 0
 for i in range(linards):
     if vaivods[i] >= 0:
         pozitivi += 1
-    elif vaivods[i] >= 0:
+    elif vaivods[i] < 0:
         nepozitivi += 1
     i += 1
 
-print(pozitivi)
+print("Pozitīvo sk skaits =", pozitivi, "Negatīvo sk skaits =",nepozitivi)
+
+para = 0
+nepara = 0
+
+for i in range(linards):
+    if vaivods[i]%2 == 0:
+        para += 1
+    else:
+        nepara += 1
+    i +=1
+
+print("Para sk skaits =", para, "Nepara sk skaits =",nepara)
