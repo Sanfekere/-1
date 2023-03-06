@@ -17,53 +17,62 @@ for i in range(linards):
         nepozitivi += 1
     i += 1
 
-print("Pozitīvo sk skaits =", pozitivi, "Negatīvo sk skaits =",nepozitivi)
+# print("Pozitīvo sk skaits =", pozitivi, "Negatīvo sk skaits =",nepozitivi)
 
-para = 0
-nepara = 0
+# para = 0
+# nepara = 0
 
+# for i in range(linards):
+#     if vaivods[i]%2 == 0:
+#         para += 1
+#     else:
+#         nepara += 1
+#     i +=1
+
+# print("Para sk skaits =", para, "Nepara sk skaits =",nepara)
+
+# vdar = 0
+
+# for i in range(linards):
+#     vdar += vaivods[i]
+#     i += 1
+
+# print("Vidējais aritmētiskais =",vdar/linards)
+
+# nepara2 = []
+# for i in range(linards):
+#     if vaivods[i]%2 == 0:
+#         None
+#     else:
+#         nepara2.append(vaivods[i])
+#     i +=1
+
+# print(nepara2,)
+
+# sk = 0
+# for i in range(linards):
+#     if vaivods[i] == 14:
+#         sk += 1
+#     i +=1
+
+# if sk == 0:
+#     print("Skaitļu kas sakrīt ar manu dzimšanas dienu nav.")
+# else:
+#     print("Skaitļu kas sakrīt ar manu dzimšanas dienu ", sk)
+
+# mzvar = 0
+# for i in range(linards):
+#     if vaivods[i] < vdar/linards:
+#         mzvar += 1
+#     i +=1
+
+# print("Skaitļu kas ir mazāki par vidējo aritmētisko ", mzvar)
+divciparsk = 0
 for i in range(linards):
-    if vaivods[i]%2 == 0:
-        para += 1
-    else:
-        nepara += 1
+    if vaivods[i] >= -99 and vaivods[i] < -9:
+        divciparsk += 1
+    elif vaivods[i] >= 10 and vaivods[i] < 100:
+        divciparsk += 1
     i +=1
 
-print("Para sk skaits =", para, "Nepara sk skaits =",nepara)
-
-vdar = 0
-
-for i in range(linards):
-    vdar += vaivods[i]
-    i += 1
-
-print("Vidējais aritmētiskais =",vdar/linards)
-
-nepara2 = []
-for i in range(linards):
-    if vaivods[i]%2 == 0:
-        None
-    else:
-        nepara2.append(vaivods[i])
-    i +=1
-
-print(nepara2,)
-
-sk = 0
-for i in range(linards):
-    if vaivods[i] == 14:
-        sk += 1
-    i +=1
-
-if sk == 0:
-    print("Skaitļu kas sakrīt ar manu dzimšanas dienu nav.")
-else:
-    print("Skaitļu kas sakrīt ar manu dzimšanas dienu ", sk)
-
-mzvar = 0
-for i in range(linards):
-    if vaivods[i] < vdar/linards:
-        mzvar += 1
-    i +=1
-
-print("Skaitļu kas ir mazāki par vidējo aritmētisko ", mzvar)
+print(divciparsk)
