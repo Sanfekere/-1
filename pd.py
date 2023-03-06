@@ -38,3 +38,5 @@ for i in range(linards):
     i += 1
 
 print("Vidējais aritmētiskais =",vdar/linards)
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Linard uzliec #1-14 pirms tu uzraksti, lai saprastu kurš ir kurš uzd :D
