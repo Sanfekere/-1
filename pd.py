@@ -30,3 +30,11 @@ for i in range(linards):
     i +=1
 
 print("Para sk skaits =", para, "Nepara sk skaits =",nepara)
+
+vdar = 0
+
+for i in range(linards):
+    vdar += vaivods[i]
+    i += 1
+
+print("Vidējais aritmētiskais =",vdar/linards)
