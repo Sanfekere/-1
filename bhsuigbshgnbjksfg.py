@@ -7,25 +7,22 @@
 
 import random
 
-# Define constants for the size of the matrix
 R = 4
 K = 5
 
-# Generate a matrix of random integers 0, 1, and 2
+
 t = [[random.randint(0, 2) for j in range(K)] for i in range(R)]
 
-# Print the original matrix
-print("Original matrix:")
+
 for i in range(R):
     for j in range(K):
         print("{:3}".format(t[i][j]), end="")
     print()
 
-# Create a new matrix by replacing 0 with 'O', 1 with '-', and 2 with 'X'
+print()
+
 new_t = [['O' if t[i][j] == 0 else '-' if t[i][j] == 1 else 'X' for j in range(K)] for i in range(R)]
 
-# Print the new matrix
-print("\nNew matrix:")
 for i in range(R):
     for j in range(K):
         print("{:3}".format(new_t[i][j]), end="")
