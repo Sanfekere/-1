@@ -10,26 +10,19 @@
 import random
 
 R = int(input("Ievadi rindu skaitu, bet ne mazāk par 2 un ne lielāku par 20 - "))
-K = int(input("Ievadi kolonnu skaitu, bet ne mazāk par 2 un ne lielāku par 20 - "))
 
-if R < 2 or K < 2:
+if R < 2:
     print("Ievadiet sk ne mazāku par 2!!!")
-    if R < 2:
-        R = int(input("Ievadi rindu skaitu - "))
-    elif K < 2:
-        K = int(input("Ievadi kolonnu skaitu - "))
-elif R > 20 or K > 20:
-    print("Ievadiet sk ne mazāku par 2!!!")
-    if R > 20:
-        R = int(input("Ievadi rindu skaitu - "))
-    elif K > 20:
-        K = int(input("Ievadi kolonnu skaitu - "))
+    R = int(input("Ievadi SKAITU - "))
+elif R > 20:
+    print("Ievadiet sk ne lielaka par 20!!!")
+    R = int(input("Ievadi SKAITU - "))
 
 
-t = [[random.randint(0, 9) for j in range(K)] for i in range(R)]
+t = [[random.randint(0, 9) for j in range(R)] for i in range(R)]
 
 for i in range(R):
-    for j in range(K):
+    for j in range(R):
         print("{:3}".format(t[i][j]), end="")
     print()
 
@@ -38,16 +31,12 @@ print("Izvadīt pirmās kolonas visus elementus vienā rindā atdalot ar atstarp
 print()
 
 for i in range(1):
-    for j in range(K):
+    for j in range(R):
         print("{:3}".format(t[i][j]), end="")
     print()
 
-# b = np.asarray(t)
-# print('Diagonal (sum): ', np.trace(b))
-# print('Diagonal (elements): ', np.diagonal(b))
-
 g = 0
-o = K-1
+o = R-1
 dio = 0
 dio2 = 0
 for i in range(R):
