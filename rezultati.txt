@@ -1,0 +1,6 @@
+Pareizo atbilžu skaits: 1
+Nepareizo atbilžu skaits: 1
+Jūsu vērtējums: 50.0%
+Pareizo atbilžu skaits: 1
+Nepareizo atbilžu skaits: 0
+Jūsu vērtējums: 100.0%
