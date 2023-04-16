@@ -6,7 +6,7 @@ def generate_numbers(max_num):
     return num1, num2
 
 def generate_operator():
-    operators = ["+", "-", "*", "/"]
+    operators = ["+", "-", "*", "/", "**"]
     return random.choice(operators)
 
 def calculate_answer(num1, num2, operator):
@@ -18,6 +18,8 @@ def calculate_answer(num1, num2, operator):
         return num1 * num2
     elif operator == "/":
         return num1 / num2
+    elif operator == "**":
+        return num1 ** num2
 
 def main():
     max_num = int(input("Ievadiet maksimālo skaitli: "))
@@ -39,7 +41,7 @@ def main():
             incorrect_answers += 1
 
         continue_answer = input("Vai turpināt? (jā/nē) ")
-        if continue_answer.lower() == "nē" or "ne":
+        if continue_answer.lower() == "nē":
             break
 
     total_answers = correct_answers + incorrect_answers
