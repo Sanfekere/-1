@@ -10,3 +10,6 @@ Jūsu vērtējums: 100.0%
 Pareizo atbilžu skaits: 7
 Nepareizo atbilžu skaits: 3
 Jūsu vērtējums: 70.0%
+Pareizo atbilžu skaits: 0
+Nepareizo atbilžu skaits: 10
+Jūsu vērtējums: 0.0%
