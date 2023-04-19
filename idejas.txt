@@ -1,0 +1,5 @@
+Sākumā iedot iespēju lietotājam uzrakstīt sava uzņēmuma nosaukumu, un nosaukums tiks rādīts apakšā gui
+Izveidto uzlabošanas iespēju kur:
+    Uzlabot 1 sek nopelnīto naudu kur katrs lvl dot *2 no iepriekšējā uzlabojuma
+    Uzlabot klikšķa naudas vienību kur katrs lvl dot *2 no iepriekšējā uzlabojuma
+    INOpirkt reklāmu , lai nopelnītu random naudu par vienu ķļikši kura sākuma summa ir 10k un katrs lvl + maksās par *2 vairāk no iepriekšējā lvl
