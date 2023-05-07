@@ -12,7 +12,6 @@ print("4. Clicker Simulator")
 
 while True:
     user_choice = input("Lai izvēlētos, ievadiet atbilstošo ciparu: ")
-
     if user_choice not in ["1", "2", "3", "4"]:
         print("Nepareiza ievade. Lūdzu, ievadiet atbilstošo ciparu no 1 līdz 4.")
         continue
