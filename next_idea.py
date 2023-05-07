@@ -1,34 +1,30 @@
-import tetris
-import wordlies
-import shooter
-import jumper
-import snake
+# import snake
+# import shooter
+# import jumper
+# import clicker
 
-# izveido funkciju, lai izvēlētos spēli
-def choose_game():
-    print("Lūdzu, izvēlieties spēli:")
-    print("1. Tetris")
-    print("2. Wordlies")
-    print("3. Shooter")
-    print("4. Jumper")
-    print("5. Snake")
+print("==== Spēļu simulatora galvenais izvēlnis ====")
+print("Izvēlieties spēli:")
+print("1. Snake")
+print("2. Shooter")
+print("3. Jumper")
+print("4. Clicker Simulator")
 
-    choice = input("Jūsu izvēle: ")
+while True:
+    user_choice = input("Lai izvēlētos, ievadiet atbilstošo ciparu: ")
 
-    if choice == "1":
-        tetris.play_game()
-    elif choice == "2":
-        wordlies.play_game()
-    elif choice == "3":
-        shooter.play_game()
-    elif choice == "4":
-        jumper.play_game()
-    elif choice == "5":
-        snake.play_game()
+    if user_choice not in ["1", "2", "3", "4"]:
+        print("Nepareiza ievade. Lūdzu, ievadiet atbilstošo ciparu no 1 līdz 4.")
+        continue
     else:
-        print("Nepareiza ievade. Lūdzu, izvēlieties spēli no 1 līdz 5.")
-        choose_game()
+        break
 
-# galvenais kods
-print("Sveiki! Laipni lūgti spēļu simulatorā.")
-choose_game()
+
+if user_choice == "1":
+    print("Jūs izvēlējāties spēli Snake.")
+elif user_choice == "2":
+    print("Jūs izvēlējāties spēli Shooter.")
+elif user_choice == "3":
+    print("Jūs izvēlējāties spēli Jumper.")
+elif user_choice == "4":
+    print("Jūs izvēlējāties spēli Clicker Simulator.")
