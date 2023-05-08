@@ -5,10 +5,13 @@ import tkinter as tk
 nauda = 1000
 uznemuma_nosaukums = "Mans uzņēmums"
 nauda_uzraksts = None
+nauda_uzraksts2 = None
+ista_nauda = 0.00000001
 
 def atjaunot_naudu():
     global nauda_uzraksts
     nauda_uzraksts.config(text="Jūsu nauda: " + str(nauda) + " dolāri")
+    nauda_uzraksts2.config(text="Jūsu nauda reālajā: " + float(nauda) * ista_nauda + " dolāri")
 
 def darbs():
     global nauda
@@ -36,6 +39,7 @@ def produkta_pardeve():
 
 def simulator():
     global nauda_uzraksts
+    global nauda_uzraksts2
 
     root = tk.Tk()
     root.title("Biznesa simulatora palīdzība")
@@ -43,6 +47,9 @@ def simulator():
 
     nauda_uzraksts = tk.Label(root, text="Jūsu nauda: " + str(nauda) + " dolāri")
     nauda_uzraksts.pack()
+
+    nauda_uzraksts2 = tk.Label(root, text="Jūsu nauda: " + float(nauda)* ista_nauda + " dolāri")
+    nauda_uzraksts2.pack()
 
     darba_poga = tk.Button(root, text="Darbs", command=darbs)
     darba_poga.pack()
