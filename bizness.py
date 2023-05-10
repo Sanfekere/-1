@@ -1,6 +1,7 @@
 import random
 import time
 import tkinter as tk
+import tkinter.simpledialog as simpledialog
 import pickle
 
 nauda = 1000
@@ -12,6 +13,7 @@ nauda_uzraksts = None
 produkta_uzraksts = None
 reklamas_uzraksts = None
 kliki_uzraksts = None
+
 
 def atjaunot_naudu():
     global nauda_uzraksts
@@ -80,6 +82,19 @@ def ielasit_stavokli():
     except FileNotFoundError:
         pass
 
+
+def reset():
+    global nauda, pārdoti_produkti, noskatītas_reklāmas, kliki
+    nauda = 1000
+    pārdoti_produkti = 0
+    noskatītas_reklāmas = 0
+    kliki = []
+    atjaunot_naudu()
+    atjaunot_produktus()
+    atjaunot_reklamas()
+    atjaunot_kliki()
+
+
 def simulator():
     global nauda_uzraksts
     global produkta_uzraksts
@@ -88,9 +103,21 @@ def simulator():
     ielasit_stavokli()
     root = tk.Tk()
     root.title("Biznesa simulatora palīdzība")
-    root.geometry("400x300")
+    root.geometry("600x500")
     def aizvert_programmu():
         root.destroy()
+
+
+    uznemuma_nosauksta_lauks = tk.Label(root, text="<b>" + uznemuma_nosaukums + "</b>")
+    uznemuma_nosauksta_lauks.pack()
+    uznemuma_nosauksta_lauks.config(font=("Arial", 18), justify="center", anchor="center")
+
+    def mainit_uznemuma_nosaukumu():
+        global uznemuma_nosaukums
+        jauns_nosaukums = tk.simpledialog.askstring("Uzņēmuma nosaukums", "Ievadiet jauno uzņēmuma nosaukumu:")
+        if jauns_nosaukums:
+            uznemuma_nosaukums = jauns_nosaukums
+            uznemuma_nosauksta_lauks.config(text=uznemuma_nosaukums)
 
     nauda_uzraksts = tk.Label(root, text="Jūsu nauda: " + str(nauda) + " dolāri")
     nauda_uzraksts.pack()
@@ -113,8 +140,18 @@ def simulator():
     produkta_pard_poga = tk.Button(root, text="Pārdot produktu", command=produkta_pardeve)
     produkta_pard_poga.pack()
 
+    reset_poga = tk.Button(root, text="Reset", command=reset)
+    reset_poga.pack()
+
+    mainit_nosaukumu_poga = tk.Button(root, text="Mainīt uzņēmuma nosaukumu", command=mainit_uznemuma_nosaukumu)
+    mainit_nosaukumu_poga.pack()
+
+
+
     aizvert_poga = tk.Button(root, text="Iziet no simulators", command=aizvert_programmu)
     aizvert_poga.pack()
+
+
 
     root.protocol("WM_DELETE_WINDOW", saglabat_stavokli)
     root.mainloop()
