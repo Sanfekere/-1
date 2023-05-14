@@ -9,8 +9,7 @@ print("Izvēlieties spēli:")
 print("1. Snake")
 print("2. Shooter")
 print("3. Jumper")
-print("4. Clicker Simulator")
-print("5. Bizzness")
+print("4. Clicker Simulator(Bizzness)")
 
 while True:
     user_choice = input("Lai izvēlētos, ievadiet atbilstošo ciparu: ")
@@ -28,7 +27,5 @@ elif user_choice == "2":
 elif user_choice == "3":
     print("Jūs izvēlējāties spēli Jumper.")
 elif user_choice == "4":
-    print("Jūs izvēlējāties spēli Clicker Simulator.")
-elif user_choice == "5":
-    print("Jūs izvēlējāties spēli Bizzness.")
+    print("Jūs izvēlējāties spēli Clicker Simulator(Bizzness).")
     bizness.simulator()
