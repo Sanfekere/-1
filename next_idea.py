@@ -1,7 +1,6 @@
 # import snake
 # import shooter
 # import jumper
-# import clicker
 import bizness
 
 print("==== Spēļu simulatora galvenais izvēlnis ====")
@@ -9,7 +8,8 @@ print("Izvēlieties spēli:")
 print("1. Snake")
 print("2. Shooter")
 print("3. Jumper")
-print("4. Clicker Simulator(Bizzness)")
+print("4. Clicker Simulator(Bizzness) - kurā jums jāspiež uz pogām, lai nopelnītu punktus")
+
 
 while True:
     user_choice = input("Lai izvēlētos, ievadiet atbilstošo ciparu: ")
