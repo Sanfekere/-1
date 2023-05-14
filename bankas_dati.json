@@ -1,0 +1,11 @@
+{
+    "nosaukums": "Mana Banka",
+    "klienti": [
+        {
+            "klienta_id": 1,
+            "vards": "w",
+            "uzvards": "2",
+            "bilance": 0
+        }
+    ]
+}
