@@ -5,6 +5,7 @@ def atvert_bankas_simulatoru():
     import Banka
 
 
+
 def atvert_clicker_simulatoru():
     bizness.simulator()
 
