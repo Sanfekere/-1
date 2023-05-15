@@ -155,6 +155,7 @@ class BankaSimulators:
 
         bankas_uzraksts_btn = tk.Button(root, text="Mainīt uzrakstu", command=self.mainit_bankas_uzrakstu)
         bankas_uzraksts_btn.pack()
+        self.paradiet_klientus()
 
 
     def mainit_bankas_uzrakstu(self):
@@ -172,6 +173,7 @@ class BankaSimulators:
             self.logs.config(state=tk.DISABLED)
             self.bankas_uzraksts_entry.insert(0, "Bankas Nosaukums")
             self.bankas_uzraksts_entry.config(fg="gray")
+        
 
 
 
@@ -193,6 +195,7 @@ class BankaSimulators:
             self.logs.config(state=tk.DISABLED)
 
         self.saglabat_datus_katra_klikski()
+        self.paradiet_klientus()
 
     def dzest_klientu(self):
         klienta_id = self.klienta_id_dzest_entry.get()
@@ -211,6 +214,7 @@ class BankaSimulators:
             self.logs.config(state=tk.DISABLED)
 
         self.saglabat_datus_katra_klikski()
+        self.paradiet_klientus()
 
     def paradiet_klientus(self):
             with open('bankas_dati.json', 'r') as file:
@@ -263,8 +267,8 @@ class BankaSimulators:
             self.logs.config(state=tk.NORMAL)
             self.logs.insert(tk.END, "Lūdzu, aizpildiet visus laukus.\n")
             self.logs.config(state=tk.DISABLED)
-
         self.saglabat_datus_katra_klikski()
+        self.paradiet_klientus()
 
     def saglabat_datus(self):
         fails = "bankas_dati.json"

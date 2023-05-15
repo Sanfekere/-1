@@ -1,4 +1,35 @@
 {
     "nosaukums": "Mana Banka",
-    "klienti": []
+    "klienti": [
+        {
+            "klienta_id": 1,
+            "vards": "V\u0101rds",
+            "uzvards": "Uzv\u0101rds",
+            "bilance": 1000000.0
+        },
+        {
+            "klienta_id": 2,
+            "vards": "1",
+            "uzvards": "1",
+            "bilance": 0
+        },
+        {
+            "klienta_id": 3,
+            "vards": "2",
+            "uzvards": "2",
+            "bilance": 0
+        },
+        {
+            "klienta_id": 5,
+            "vards": "4",
+            "uzvards": "4",
+            "bilance": 0
+        },
+        {
+            "klienta_id": 6,
+            "vards": "5",
+            "uzvards": "5",
+            "bilance": 0
+        }
+    ]
 }
