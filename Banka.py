@@ -7,9 +7,12 @@ class Banka:
     def __init__(self, nosaukums):
         self.nosaukums = nosaukums
         self.klienti = {}
+        self.klienta_id_skaitītājs = 0
+
 
     def pievienot_klientu(self, klienta_vards, klienta_uzvards, konta_bilance=0):
-        klienta_id = len(self.klienti) + 1
+        self.klienta_id_skaitītājs += 1
+        klienta_id = self.klienta_id_skaitītājs
         jauns_klients = Klients(klienta_id, klienta_vards, klienta_uzvards, konta_bilance)
         self.klienti[klienta_id] = jauns_klients
 
@@ -17,8 +20,18 @@ class Banka:
         if klienta_id in self.klienti:
             dzestais_klients = self.klienti.pop(klienta_id)
             print(f"Klients dzests: {dzestais_klients}")
+            self.atjaunot_klienta_id_skaitītāju()
+            tukso_id = self.atrast_tukso_id()
+            if tukso_id is not None and tukso_id > klienta_id:
+                self.klienti[tukso_id] = dzestais_klients
         else:
             print("Klients ar šādu ID nav atrasts.")
+
+    def aktualizet_klienta_id_skaits(self):
+        if self.klienti:
+            self.klienta_id_skaitītājs = max(self.klienti.keys())
+        else:
+            self.klienta_id_skaitītājs = 0
 
     def paradiet_klientus(self):
         klientu_saraksts = []
@@ -65,7 +78,17 @@ class Banka:
 
     def nodzest_datus(self):
         self.klienti = {}
+        self.atjaunot_klienta_id_skaitītāju()
         print("Dati ir nodzēsti!")
+
+    def atjaunot_klienta_id_skaitītāju(self):
+        self.klienta_id_skaitītājs = max(self.klienti.keys(), default=0)
+
+    def atrast_tukso_id(self):
+        pieejamie_id = set(range(1, self.klienta_id_skaitītājs + 2))
+        izmantotie_id = set(self.klienti.keys())
+        tukso_id = next(iter(pieejamie_id - izmantotie_id), None)
+        return tukso_id
 
 class Klients:
     def __init__(self, klienta_id, vards, uzvards, bilance=0):
@@ -196,6 +219,7 @@ class BankaSimulators:
 
         self.saglabat_datus_katra_klikski()
         self.paradiet_klientus()
+
 
     def dzest_klientu(self):
         klienta_id = self.klienta_id_dzest_entry.get()
