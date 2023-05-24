@@ -3,14 +3,18 @@ import random
 
 def uzdevums_1():
     alex = []
-
-    n = int(input("Ievadi skaitli n - "))
+    while True:
+        n = int(input("Ievadi skaitli n - "))
+        if n <= 1  or n >= 200:
+            print("Nepareiza ievade. Lūdzu, ievadiet atbilstošo ciparu no 2 līdz 199.")
+            continue
+        else:
+            break
 
 
     for i in range(n):
         n = random.randrange(-150, 150)
-        if n > 1 and n < 200:
-            alex.append(n)
+        alex.append(n)
 
 
 
