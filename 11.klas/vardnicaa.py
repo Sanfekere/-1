@@ -31,7 +31,7 @@ while True:
     elif ievade == 'vardnica':
         print('Izvadīt visu vai kādu noteiktu vārdu(suns,kaķis u.c): ')
         var = input().strip().lower()
-        if var == 'visi':
+        if var == 'visu':
             print(vardnica)
         else:
             print(vardnica[f'{var}'])
