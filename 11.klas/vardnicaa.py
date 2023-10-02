@@ -1,5 +1,4 @@
 # pip install deep-translator
-
 from deep_translator import GoogleTranslator
 
 vardnica = {
@@ -37,7 +36,7 @@ while True:
             print(vardnica[f'{var}'])
         continue
 
-    print('Uz kuru valodu tulkot (en, de): ')
+    print('Uz kuru valodu tulkot (en, de, az, be, bg, hr, cs, da, nl, et, lt, fi, fr, el, hu, it, ja, kk, ko, ky, lt, sr, tr, uk, ru): ')
     valoda = input().strip().lower()
 
     iztulkots = tulkojums(ievade, valoda)
