@@ -18,7 +18,7 @@ while True:
 
     print("Jūs ievadijāt : ", ievade)
     if ievade == 'start':
-        cena = float(input("Ievadiet linoleja cenu par m3: "))
+        cena = float(input("Ievadiet linoleja cenu par m2: "))
         lplatums = float(input("Ievadiet linoleja platumu: "))
         tplatums = float(input("Ievadiet telpas platumu: "))
         tgarums = float(input("Ievadiet telpas garumu: "))
