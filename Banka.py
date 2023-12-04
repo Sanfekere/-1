@@ -324,3 +324,72 @@ logs = tk.Text(root, width=70, height=10)
 banka_simulators = BankaSimulators(logs)
 
 root.mainloop()
+
+
+import tkinter as tk
+import sqlite3
+
+# Izveido datubāzi
+conn = sqlite3.connect("cars.db")
+c = conn.cursor()
+
+# Izveido tabulu
+c.execute('CREATE TABLE cars (category text, model text, year int, mileage int)')
+
+# Izveido logu
+root = tk.Tk()
+root.title("Automašīnu reģistrācija")
+
+# Izveido kategoriju izvēlni
+category_label = tk.Label(root, text="Kategorija:")
+category_menu = tk.OptionMenu(root, "", ["Bilerģis", "Kompakts", "Krossovers", "Kabriolets", "Mūsdienu klasika", "Sporta auto", "SUV", "Universālais", "Vans"])
+category_label.grid(row=0, column=0)
+category_menu.grid(row=0, column=1)
+
+# Izveido modeļa izvēlni
+model_label = tk.Label(root, text="Modelis:")
+model_entry = tk.Entry(root)
+model_label.grid(row=1, column=0)
+model_entry.grid(row=1, column=1)
+
+# Izveido gada izvēlni
+year_label = tk.Label(root, text="Gads:")
+year_entry = tk.Entry(root)
+year_label.grid(row=2, column=0)
+year_entry.grid(row=2, column=1)
+
+# Izveido nobraukuma izvēlni
+mileage_label = tk.Label(root, text="Nobraukums (km):")
+mileage_entry = tk.Entry(root)
+mileage_label.grid(row=3, column=0)
+mileage_entry.grid(row=3, column=1)
+
+# Izveido saglabāšanas pogu
+save_button = tk.Button(root, text="Saglabāt", command=save_data)
+save_button.grid(row=4, column=0)
+
+# Izveido logu redzamu
+root.mainloop()
+
+# Saglabā datus datubāzē
+def save_data():
+  category = category_menu.get()
+  model = model_entry.get()
+  year = year_entry.get()
+  mileage = mileage_entry.get()
+
+  # Pārbaudi, vai visi lauki ir aizpildīti
+  if category == "" or model == "" or year == "" or mileage == "":
+    tk.messagebox.showerror("Kļūda", "Visi lauki ir jāaizpilda.")
+    return
+
+  # Izveido datu rindiņu
+  data = (category, model, int(year), int(mileage))
+
+  # Ievadi datu rindiņu datubāzē
+  c.execute('INSERT INTO cars (category, model, year, mileage) VALUES (?, ?, ?, ?)', data)
+  conn.commit()
+
+  # Parādi paziņojumu
+  tk.messagebox.showinfo("Informācija", "Dati ir saglabāti.")
+    
