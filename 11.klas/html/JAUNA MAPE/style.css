@@ -15,3 +15,36 @@ a {
 a:hover {
     color: #b3003c;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 50%;
+    border: 5px solid #100961;
+    padding: 2em;
+    line-height: 1.168;
+    position: relative;
+    margin: 5rem auto;
+    font-weight: bold;
+    background-color: rgb(117, 207, 231);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: normal;
+}
+
+p {
+    font-size: 1.5em;
+}
+.break-point::before {
+    content: "hiddentext";
+    font-size: 0;
+    display: block;
+    line-height: 0;
+}
