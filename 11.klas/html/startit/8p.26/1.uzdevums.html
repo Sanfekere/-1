@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SimryCode</title>
+		<meta charset="utf8"/>
+		<style>
+
+		</style>
+	</head>
+	<body>
+<p>Mana pirmā pamatne </p>
+<canvas id="manaPamatne" 
+        width="500" 
+        height="500"  
+        style="border:6px solid #E62B2B; background-color:#11FFFF"> 
+</canvas>
+
+<p>
+	<button type="button" onclick="darbs()">Zīmēt</button>
+</p>
+		<script>
+var pamatne = document.getElementById("manaPamatne");
+var zimejums = pamatne.getContext("2d");
+
+// uzzīmēsim taisnstūrus
+zimejums.strokeRect(200,20,150,70);
+
+// riņķis vai loks
+zimejums.beginPath();
+zimejums.arc(350, 250, 100, 0, 2 * Math.PI);
+zimejums.stroke();
+
+function darbs(){
+    zimejums.beginPath();
+    zimejums.strokeStyle = "green";
+    zimejums.strokeRect(20, 20, 100, 60);
+    zimejums.stroke();
+    zimejums.beginPath();
+    zimejums.strokeStyle = "red";
+    zimejums.strokeRect(25, 25, 50, 50);
+    zimejums.stroke();
+}
+
+		</script>
+	</body>
+</html>
