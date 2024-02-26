@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>SimryCode</title>
+		<meta charset="utf8"/>
+		<style>
+			body {
+				height: 100vh;
+				margin: 0;
+				position: relative;
+				overflow: hidden;
+			}
+			#box {
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				background-color: red;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		</style>
+	</head>
+	<body>
+		<p>2. vingrinājums</p>
+		<p>Kas notiks, ja būs nospiests tastatūras taustiņš ESC?</p>
+		<div id="box"></div>
+		<script>
+			const box = document.getElementById('box');
+			const keys = {
+				up: 38,
+				down: 40,
+				left: 37,
+				right: 39
+			};
+			const limits = {
+				top: 0,
+				left: 0,
+				width: window.innerWidth,
+				height: window.innerHeight
+			};
+			function manaFunkcija(notikums) {
+				const key = notikums.keyCode;
+				if (key === keys.up) {
+					let newTop = parseInt(box.style.top) - 10;
+					if (newTop < limits.top) {
+						newTop = limits.top;
+					}
+					box.style.top = newTop + 'px';
+				} else if (key === keys.down) {
+					let newTop = parseInt(box.style.top) + 10;
+					if (newTop + box.offsetHeight > limits.height) {
+						newTop = limits.height - box.offsetHeight;
+					}
+					box.style.top = newTop + 'px';
+				} else if (key === keys.left) {
+					let newLeft = parseInt(box.style.left) - 10;
+					if (newLeft < limits.left) {
+						newLeft = limits.left;
+					}
+					box.style.left = newLeft + 'px';
+				} else if (key === keys.right) {
+					let newLeft = parseInt(box.style.left) + 10;
+					if (newLeft + box.offsetWidth > limits.width) {
+						newLeft = limits.width - box.offsetWidth;
+					}
+					box.style.left = newLeft + 'px';
+				} else if (key === 27) {
+					alert("Tika piespiests Esc taustiņš");
+				}
+			}
+			addEventListener("keydown", manaFunkcija);
+		</script>
+	</body>
+</html>

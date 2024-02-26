@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SimryCode</title>
+		<meta charset="utf8"/>
+		<style>
+			body {
+				transition: background-color 0.5s;
+			}
+		</style>
+	</head>
+	<body>
+		<p>1. vingrinājums</p>
+		<p id="info"> </p>
+		<script>
+			function piespiests(event) {
+				const info = document.getElementById('info');
+				switch (event.key) {
+					case 'r':
+						document.body.style.backgroundColor = 'red';
+						info.innerHTML = "Piespiests r";
+						break;
+					case 'g':
+						document.body.style.backgroundColor = 'green';
+						info.innerHTML = "Piespiests g";
+						break;
+					case 'b':
+						document.body.style.backgroundColor = 'blue';
+						info.innerHTML = "Piespiests b";
+						break;
+					default:
+						info.innerHTML = "Atlaists";
+				}
+			}
+
+			addEventListener("keydown", piespiests);
+		</script>
+	</body>
+</html>
