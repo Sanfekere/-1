@@ -1,0 +1,62 @@
+p.upes{
+    font-size: 1.5em;
+    color: blue;
+    font-family: Verdana, sans-serif;
+}
+
+.img2 {
+    float: right;
+    margin-left: 20px;
+  }
+  
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+body.gauja {
+    background-image: url('gauja.jpg');
+    background-repeat: no-repeat;
+  }
+
+table {
+  border-collapse: collapse;
+}
+
+caption {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: left;
+  color: #333;
+}
+
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+thead {
+	background-color: #fffb00;
+	color: black;
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	letter-spacing: 2%;
+}
+
+th.aj {
+    border: none;
+    padding: 8px;
+  }
+
+h1{
+    color: green;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    color: blue;
+    font-family: Verdana, sans-serif;
+    font-size: 12pt;
+}
